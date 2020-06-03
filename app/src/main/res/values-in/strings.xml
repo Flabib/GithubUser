@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Pengguna Github</string>
+
+    <string name="settings">Pengaturan</string>
+    <string name="empty">Kosong</string>
+    <string name="search">Cari</string>
+    <string name="avatar">Avatar</string>
+    <string name="follower">"Pengikut"</string>
+    <string name="following">"Mengikuti"</string>
+    <string name="night_mode_enable">Mode Malam : Aktif</string>
+    <string name="night_mode_disable">Mode Malam : Tidak Aktif</string>
+    <string name="loading">Memuat…</string>
+    <string name="favorite">Favorit</string>
+    <string name="home_title">Pengguna Github</string>
+    <string name="favorite_title">Pengguna Favorit</string>
+    <string name="unfavorite">Hapus Favorit</string>
+    <string name="title_activity_settings">Pengaturan</string>
+    <string name="theme_header">Tema</string>
+    <string name="reminder_header">Pengingat</string>
+    <string name="theme_title">Mode Gelap</string>
+    <string name="reminder_title">Ingatkan Saya</string>
+    <string name="reminder_summary">Aktifkan untuk menjalankan pengingat</string>
+    <string name="theme_summary">Aktifkan untuk menjalankan mode gelap</string>
+    <string name="reminder_enable">Pengingat : Aktif</string>
+    <string name="reminder_disable">Pengingat : Tidak Aktif</string>
+    <string name="reminder_message">Jangan lupa melihat pengguna favorit Anda hari ini!</string>
+    <string name="user_image">Gambar Pengguna</string>
+</resources>

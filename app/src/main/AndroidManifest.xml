@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="id.practice.githubuser">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <permission android:name="id.practice.githubuser.READ_DATABASE" android:protectionLevel="normal"/>
+    <permission android:name="id.practice.githubuser.WRITE_DATABASE" android:protectionLevel="normal"/>
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <receiver android:name="id.practice.githubuser.views.widget.FavoriteUserWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/favorite_user_widget_info" />
+        </receiver>
+        <receiver
+            android:name="id.practice.githubuser.data.receiver.ReminderReceiver"
+            android:enabled="true"/>
+
+        <activity
+            android:name="id.practice.githubuser.views.activities.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="id.practice.githubuser.views.activities.MainActivity" />
+
+        <provider
+            android:name="id.practice.githubuser.data.provider.FavoriteProvider"
+            android:authorities="id.practice.githubuser"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="id.practice.githubuser.READ_DATABASE"
+            android:writePermission="id.practice.githubuser.WRITE_DATABASE"/>
+
+        <service
+            android:name="id.practice.githubuser.views.widget.StackWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <activity android:name="id.practice.githubuser.views.activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
